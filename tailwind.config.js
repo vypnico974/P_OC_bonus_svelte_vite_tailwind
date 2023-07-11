@@ -9,9 +9,19 @@
 
 /** @type {import('tailwindcss').Config} */
 export default {
+  future: {
+    purgeLayersByDefault: true,
+    removeDeprecatedGapUtilities: true,
+  },
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {}
   },
-  plugins: []
+  plugins: [],
+  purge: {
+    content: [
+     "./src/**/*.svelte",
+
+    ],
+  }
 };
